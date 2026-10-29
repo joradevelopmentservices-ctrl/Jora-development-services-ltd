@@ -64,15 +64,22 @@ footer{background:#10151b;color:#aeb7c2;padding:24px 0}
  .section{padding:65px 0}
  .footer-wrap{flex-direction:column}
 }
-/* Move menu button to the right */
-.menu-btn {
-position: absolute;
-right: 20px;
-top: 135px;
-z-index: 1001;
-}
+@media (max-width: 850px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
 
-/* Keep header as positioning reference */
-.site-header {
-position: relative;
-                     }
+  .nav-wrap {
+    position: relative;
+  }
+
+  .menu-btn {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 10px;
+    z-index: 1001;
+  }
+}
